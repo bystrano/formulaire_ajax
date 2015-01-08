@@ -1,0 +1,22 @@
+<paquet
+  prefix="formulaires_ajax"
+  categorie="outil"
+  version="1.0.0"
+  etat="dev"
+  compatibilite="[3.0.18-dev;3.0.*]"
+  logo=""
+  documentation=""
+>
+  <!--
+    Paquet genere le 2015-01-08 19:34:42
+  -->
+
+  <nom>jQuery Formulaires SPIP</nom>
+
+  <auteur>Michel</auteur>
+
+  <licence>GNU/GPL</licence>
+
+  <necessite nom="saisies" />
+
+</paquet>

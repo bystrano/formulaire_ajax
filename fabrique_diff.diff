@@ -1,0 +1,29 @@
+Only in ../plugins/fabrique_auto/.backup/formulaires_ajax/: .git
+diff -r -x . -x .. -x fabrique_diff.diff -x fabrique_formulaires_ajax.php ../plugins/fabrique_auto/.backup/formulaires_ajax/formulaires_ajax_pipelines.php ../plugins/fabrique_auto/formulaires_ajax/formulaires_ajax_pipelines.php
+3c3
+<  * Utilisations de pipelines par Jquery Formulaires SPIP
+---
+>  * Utilisations de pipelines par jQuery Formulaires SPIP
+5c5
+<  * @plugin     Jquery Formulaires SPIP
+---
+>  * @plugin     jQuery Formulaires SPIP
+diff -r -x . -x .. -x fabrique_diff.diff -x fabrique_formulaires_ajax.php ../plugins/fabrique_auto/.backup/formulaires_ajax/lang/formulaires_ajax_fr.php ../plugins/fabrique_auto/formulaires_ajax/lang/formulaires_ajax_fr.php
+9c9
+< 	'formulaires_ajax_titre' => 'Jquery Formulaires SPIP',
+---
+> 	'formulaires_ajax_titre' => 'jQuery Formulaires SPIP',
+diff -r -x . -x .. -x fabrique_diff.diff -x fabrique_formulaires_ajax.php ../plugins/fabrique_auto/.backup/formulaires_ajax/lang/paquet-formulaires_ajax_fr.php ../plugins/fabrique_auto/formulaires_ajax/lang/paquet-formulaires_ajax_fr.php
+10c10
+< 	'formulaires_ajax_nom' => 'Jquery Formulaires SPIP',
+---
+> 	'formulaires_ajax_nom' => 'jQuery Formulaires SPIP',
+diff -r -x . -x .. -x fabrique_diff.diff -x fabrique_formulaires_ajax.php ../plugins/fabrique_auto/.backup/formulaires_ajax/paquet.xml ../plugins/fabrique_auto/formulaires_ajax/paquet.xml
+11c11
+< 		Paquet genere le 2015-01-08 19:32:39
+---
+> 		Paquet genere le 2015-01-08 19:34:42
+14c14
+< 	<nom>Jquery Formulaires SPIP</nom>
+---
+> 	<nom>jQuery Formulaires SPIP</nom>
