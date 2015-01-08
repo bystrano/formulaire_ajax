@@ -25,7 +25,10 @@
 
                     return valeur;
                 }
-            }
+            },
+            // soumettre automatiquement le formulaire dès qu'une
+            // valeur change
+            autoSubmit: true
         }, options);
 
         // Retourne une fonction qui calcule la valeur d'un type de
@@ -73,6 +76,24 @@
                     });
                 }
             });
+
+        if (config.autoSubmit) {
+            // On soumet automatiquement le formulaire dès que quelque
+            // chose change
+            form
+                .find('input')
+                .change(function (e) {
+                    form.submit();
+                })
+                // les inputs n'émettent pas de 'change' lors de la
+                // frappe
+                .keyup(function () {
+                    form.submit();
+                });
+
+            // … du coup on a plus besoin du bouton
+            form.find('.boutons').remove();
+        }
 
         return form;
     };
