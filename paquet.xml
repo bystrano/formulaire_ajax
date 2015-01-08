@@ -19,4 +19,6 @@
 
   <necessite nom="saisies" />
 
+  <pipeline nom="jquery_plugins" inclure="formulaires_ajax_pipelines.php" />
+
 </paquet>
