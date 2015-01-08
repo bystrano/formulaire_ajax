@@ -61,7 +61,18 @@
             return form;
         }
 
-        // TODO ajaxifier le formulaire
+        // On ajaxifie le formulaire
+        form
+            .unbind('submit')
+            .submit(function (e) {
+                e.preventDefault();
+                for (var i in config.blocsAjax) {
+                    ajaxReload(config.blocsAjax[i], {
+                        args: form.valeurs(),
+                        history: true
+                    });
+                }
+            });
 
         return form;
     };
