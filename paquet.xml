@@ -1,5 +1,5 @@
 <paquet
-  prefix="formulaires_ajax"
+  prefix="formulaire_ajax"
   categorie="outil"
   version="1.0.0"
   etat="dev"
@@ -19,6 +19,6 @@
 
   <necessite nom="saisies" />
 
-  <pipeline nom="jquery_plugins" inclure="formulaires_ajax_pipelines.php" />
+  <pipeline nom="jquery_plugins" inclure="formulaire_ajax_pipelines.php" />
 
 </paquet>

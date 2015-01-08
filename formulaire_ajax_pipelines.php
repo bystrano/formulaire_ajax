@@ -6,21 +6,21 @@
  * @copyright  2015
  * @author     Michel
  * @licence    GNU/GPL
- * @package    SPIP\Formulaires_ajax\Pipelines
+ * @package    SPIP\formulaire_ajax\Pipelines
  */
 
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 /**
- * Inclure le plugin jQuery formulairesAjax
+ * Inclure le plugin jQuery formulaireAjax
  *
  * @pipeline jquery_plugins
  * @param  array $scripts Liste des plugins jQuery
  * @return array          Données du pipeline
  */
-function formulaires_ajax_jquery_plugins ($scripts) {
+function formulaire_ajax_jquery_plugins ($scripts) {
 
-    $scripts[] = "javascripts/jquery.formulairesAjax.js";
+    $scripts[] = "javascripts/jquery.formulaireAjax.js";
 
     return $scripts;
 }

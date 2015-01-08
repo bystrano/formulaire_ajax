@@ -1,5 +1,5 @@
 (function ($) {
-    $.fn.formulairesAjax = function (options) {
+    $.fn.formulaireAjax = function (options) {
 
         var config, form, champs;
 

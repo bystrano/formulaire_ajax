@@ -6,5 +6,5 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
     // F
-    'formulaires_ajax_titre' => 'jQuery Formulaires SPIP',
+    'formulaire_ajax_titre' => 'jQuery Formulaires SPIP',
 );
