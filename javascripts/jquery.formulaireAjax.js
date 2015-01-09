@@ -57,6 +57,17 @@
                 },
                 textarea: function (champ) {
                     return $(champ).find('textarea').html();
+                },
+                selection: function (champ) {
+                    var valeur = '';
+
+                    $(champ).find('option').each(function () {
+                        if ($(this).attr('selected') === 'selected') {
+                            valeur = $(this).attr('value');
+                        }
+                    });
+
+                    return valeur;
                 }
             }
         }, options);
