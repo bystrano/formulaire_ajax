@@ -46,19 +46,21 @@
      }),
          valeurs = form.valeurs();
 
-     QUnit.test( "Recupération valeur saisie input", function( assert ) {
+     QUnit.module("Récupérations des valeurs du formulaire - Saisies simples")
+
+     QUnit.test( "saisie input", function( assert ) {
        assert.deepEqual( valeurs.test_input, "metaphoneme", "OK !" );
      });
 
-     QUnit.test( "Recupération valeur saisie checkbox", function( assert ) {
+     QUnit.test( "saisie checkbox", function( assert ) {
        assert.ok( valeurs.test_checkbox.equals(['1','4']), "OK !" );
      });
 
-     QUnit.test( "Recupération valeur saisie case", function( assert ) {
+     QUnit.test( "saisie case", function( assert ) {
        assert.deepEqual( valeurs.test_case, "on", "OK !" );
      });
 
-     QUnit.test( "Recupération valeur saisie hidden", function( assert ) {
+     QUnit.test( "saisie hidden", function( assert ) {
        assert.deepEqual( valeurs.test_hidden, "You'll never find me !", "OK !" );
      });
 

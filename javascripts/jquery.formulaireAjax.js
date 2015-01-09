@@ -8,6 +8,9 @@
         config = $.extend({
             // Options par défaut
             blocsAjax: [], // Un tableau de noms ajax de <INCLURE>
+            // soumettre automatiquement le formulaire dès qu'une
+            // valeur change
+            autoSubmit: true,
             // Donne des fonctions pour trouver la valeur d'une saisie
             calculValeurSaisie: {
                 defaut: function (champ) {
@@ -30,10 +33,7 @@
 
                     return valeur;
                 }
-            },
-            // soumettre automatiquement le formulaire dès qu'une
-            // valeur change
-            autoSubmit: true
+            }
         }, options);
 
         // Retourne une fonction qui calcule la valeur d'un type de
