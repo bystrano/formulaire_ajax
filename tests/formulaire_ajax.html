@@ -62,6 +62,10 @@
        assert.equal( valeurs.test_hidden, "You'll never find me !", "OK !" );
      });
 
+     QUnit.test( "La saisie explication ne retourne pas de valeur", function( assert ) {
+       assert.ok( ! valeurs.hasOwnProperty('test_explication'), "OK !" );
+     });
+
     </script>
   </body>
 </html>

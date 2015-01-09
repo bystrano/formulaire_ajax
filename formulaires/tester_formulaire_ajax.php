@@ -39,6 +39,13 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 'nom' => 'test_hidden',
             ),
         ),
+        array(
+            'saisie' => 'explication',
+            'options' => array(
+                'nom' => 'test_explication',
+                'texte' => 'Ceci est un formulaire de test',
+            ),
+        ),
     );
 
     return $saisies;
