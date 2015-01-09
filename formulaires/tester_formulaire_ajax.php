@@ -46,6 +46,20 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 'texte' => 'Ceci est un formulaire de test',
             ),
         ),
+        array(
+            'saisie' => 'fieldset',
+            'options' => array(
+                'nom' => 'test_fieldset',
+            ),
+            'saisies' => array(
+                array(
+                    'saisie' => 'input',
+                    'options' => array(
+                        'nom' => 'test_input_dans_fieldset',
+                    ),
+                ),
+            ),
+        ),
     );
 
     return $saisies;
@@ -66,6 +80,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_checkbox' => array(1,4),
         'test_case' => 'on',
         'test_hidden' => "You'll never find me !",
+        'test_input_dans_fieldset' => 'on met le brun',
     );
 
     return $valeurs;

@@ -66,6 +66,14 @@
        assert.ok( ! valeurs.hasOwnProperty('test_explication'), "OK !" );
      });
 
+     QUnit.test( "La saisie fieldset retourne pas de valeur", function( assert ) {
+       assert.ok( ! valeurs.hasOwnProperty('test_fieldset'), "OK !" );
+     });
+
+     QUnit.test( "Les saisies dans des fieldsets sont récupérées aussi", function( assert ) {
+       assert.equal( valeurs.test_input_dans_fieldset, 'on met le brun', "OK !" );
+     });
+
     </script>
   </body>
 </html>
