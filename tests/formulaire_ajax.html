@@ -5,6 +5,34 @@
     <title>Tests Formulaire Ajax</title>
     <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.16.0.css">
     #INSERT_HEAD
+
+    <script> // Une fonction pour pouvoir tester l'égalité de tableaux
+     // attach the .equals method to Array's prototype to call it on any array
+     Array.prototype.equals = function (array) {
+       // if the other array is a falsy value, return
+       if (!array)
+         return false;
+
+       // compare lengths - can save a lot of time
+       if (this.length != array.length)
+         return false;
+
+       for (var i = 0, l=this.length; i < l; i++) {
+         // Check if we have nested arrays
+         if (this[i] instanceof Array && array[i] instanceof Array) {
+           // recurse into the nested arrays
+           if (!this[i].equals(array[i]))
+             return false;
+         }
+         else if (this[i] != array[i]) {
+           // Warning - two different object instances will never be equal: {x:20} != {x:20}
+           return false;
+         }
+       }
+       return true;
+     }
+    </script>
+
   </head>
   <body>
     <div id="qunit"></div>
@@ -18,8 +46,12 @@
      }),
          valeurs = form.valeurs();
 
-     QUnit.test( "saisie input", function( assert ) {
-       assert.ok( valeurs.test_input == "metaphoneme", "OK !" );
+     QUnit.test( "Recupération valeur saisie input", function( assert ) {
+       assert.equal( valeurs.test_input, "metaphoneme", "OK !" );
+     });
+
+     QUnit.test( "Recupération valeur saisie checkbox", function( assert ) {
+       assert.ok( valeurs.test_checkbox.equals(['1','4']), "OK !" );
      });
 
     </script>
