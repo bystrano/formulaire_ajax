@@ -33,6 +33,12 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 'nom' => 'test_case',
             ),
         ),
+        array(
+            'saisie' => 'hidden',
+            'options' => array(
+                'nom' => 'test_hidden',
+            ),
+        ),
     );
 
     return $saisies;
@@ -52,6 +58,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_input' => 'metaphoneme',
         'test_checkbox' => array(1,4),
         'test_case' => 'on',
+        'test_hidden' => "You'll never find me !",
     );
 
     return $valeurs;
