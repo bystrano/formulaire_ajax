@@ -27,6 +27,12 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 ),
             ),
         ),
+        array(
+            'saisie' => 'case',
+            'options' => array(
+                'nom' => 'test_case',
+            ),
+        ),
     );
 
     return $saisies;
@@ -45,6 +51,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
     $valeurs = array(
         'test_input' => 'metaphoneme',
         'test_checkbox' => array(1,4),
+        'test_case' => 'on',
     );
 
     return $valeurs;

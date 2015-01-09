@@ -13,6 +13,11 @@
                 defaut: function (champ) {
                     return $(champ).find('input').attr('value');
                 },
+                case: function (champ) {
+                    var input = $(champ).find('input[type="checkbox"]');
+
+                    return (input.attr('checked') === 'checked') ? 'on' : '';
+                },
                 checkbox: function (champ) {
                     var inputs = $(champ).find('input'),
                         valeur = [];
