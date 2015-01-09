@@ -47,7 +47,7 @@
          valeurs = form.valeurs();
 
      QUnit.test( "Recupération valeur saisie input", function( assert ) {
-       assert.equal( valeurs.test_input, "metaphoneme", "OK !" );
+       assert.deepEqual( valeurs.test_input, "metaphoneme", "OK !" );
      });
 
      QUnit.test( "Recupération valeur saisie checkbox", function( assert ) {
@@ -55,11 +55,11 @@
      });
 
      QUnit.test( "Recupération valeur saisie case", function( assert ) {
-       assert.equal( valeurs.test_case, "on", "OK !" );
+       assert.deepEqual( valeurs.test_case, "on", "OK !" );
      });
 
      QUnit.test( "Recupération valeur saisie hidden", function( assert ) {
-       assert.equal( valeurs.test_hidden, "You'll never find me !", "OK !" );
+       assert.deepEqual( valeurs.test_hidden, "You'll never find me !", "OK !" );
      });
 
      QUnit.test( "La saisie explication ne retourne pas de valeur", function( assert ) {
@@ -71,7 +71,7 @@
      });
 
      QUnit.test( "Les saisies dans des fieldsets sont récupérées aussi", function( assert ) {
-       assert.equal( valeurs.test_input_dans_fieldset, 'on met le brun', "OK !" );
+       assert.deepEqual( valeurs.test_input_dans_fieldset, 'on met le brun', "OK !" );
      });
 
     </script>
