@@ -54,6 +54,9 @@
                     });
 
                     return valeur;
+                },
+                textarea: function (champ) {
+                    return $(champ).find('textarea').html();
                 }
             }
         }, options);
@@ -85,6 +88,7 @@
 
             return valeurs;
         }
+
 
         // s'il n'y a pas de blocs ajax on ne fait rien
         if (config.blocsAjax.length === 0) {

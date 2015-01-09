@@ -102,6 +102,12 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 ),
             ),
         ),
+        array(
+            'saisie' => 'textarea',
+            'options' => array(
+                'nom' => 'test_textarea',
+            ),
+        ),
     );
 
     return $saisies;
@@ -126,6 +132,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_oui_non_oui' => 'on',
         'test_oui_non_non' => '',
         'test_radio' => '2',
+        'test_textarea' => 'Lorem Ipsum etc…',
     );
 
     return $valeurs;
