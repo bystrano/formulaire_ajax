@@ -76,6 +76,13 @@
        assert.deepEqual( valeurs.test_input_dans_fieldset, 'on met le brun', "OK !" );
      });
 
+     QUnit.test( "saisie oui_non oui", function( assert ) {
+       assert.deepEqual( valeurs.test_oui_non_oui, "on", "OK !" );
+     });
+
+     QUnit.test( "saisie oui_non non", function( assert ) {
+       assert.deepEqual( valeurs.test_oui_non_non, "", "OK !" );
+     });
     </script>
   </body>
 </html>

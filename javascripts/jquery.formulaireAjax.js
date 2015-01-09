@@ -32,6 +32,17 @@
                     });
 
                     return valeur;
+                },
+                oui_non: function (champ) {
+                    var valeur = '';
+
+                    $(champ).find('input').each(function () {
+                        if ($(this).attr('checked') === 'checked') {
+                            valeur = $(this).attr('value');
+                        }
+                    });
+
+                    return valeur;
                 }
             }
         }, options);

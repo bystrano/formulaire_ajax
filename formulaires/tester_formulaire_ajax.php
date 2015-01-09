@@ -60,6 +60,18 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 ),
             ),
         ),
+        array(
+            'saisie' => 'oui_non',
+            'options' => array(
+                'nom' => 'test_oui_non_oui',
+            ),
+        ),
+        array(
+            'saisie' => 'oui_non',
+            'options' => array(
+                'nom' => 'test_oui_non_non',
+            ),
+        ),
     );
 
     return $saisies;
@@ -81,6 +93,8 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_case' => 'on',
         'test_hidden' => "You'll never find me !",
         'test_input_dans_fieldset' => 'on met le brun',
+        'test_oui_non_oui' => 'on',
+        'test_oui_non_non' => '',
     );
 
     return $valeurs;
