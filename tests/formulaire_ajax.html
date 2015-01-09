@@ -56,8 +56,12 @@
        assert.ok( valeurs.test_checkbox.equals(['1','4']), "OK !" );
      });
 
-     QUnit.test( "saisie case", function( assert ) {
-       assert.deepEqual( valeurs.test_case, "on", "OK !" );
+     QUnit.test( "saisie case oui", function( assert ) {
+       assert.deepEqual( valeurs.test_case_oui, "on", "OK !" );
+     });
+
+     QUnit.test( "saisie case non", function( assert ) {
+       assert.deepEqual( valeurs.test_case_non, "", "OK !" );
      });
 
      QUnit.test( "saisie hidden", function( assert ) {

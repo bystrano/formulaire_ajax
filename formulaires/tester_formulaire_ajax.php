@@ -30,7 +30,13 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
         array(
             'saisie' => 'case',
             'options' => array(
-                'nom' => 'test_case',
+                'nom' => 'test_case_oui',
+            ),
+        ),
+        array(
+            'saisie' => 'case',
+            'options' => array(
+                'nom' => 'test_case_non',
             ),
         ),
         array(
@@ -90,7 +96,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
     $valeurs = array(
         'test_input' => 'metaphoneme',
         'test_checkbox' => array(1,4),
-        'test_case' => 'on',
+        'test_case_oui' => 'on',
         'test_hidden' => "You'll never find me !",
         'test_input_dans_fieldset' => 'on met le brun',
         'test_oui_non_oui' => 'on',
