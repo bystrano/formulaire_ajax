@@ -68,6 +68,18 @@
                     });
 
                     return valeur;
+                },
+                selection_multiple: function (champ) {
+                    var valeur = null;
+
+                    $(champ).find('option').each(function () {
+                        if ($(this).attr('selected') === 'selected') {
+                            if ( ! valeur) { valeur = []; }
+                            valeur.push($(this).attr('value'));
+                        }
+                    });
+
+                    return valeur;
                 }
             }
         }, options);

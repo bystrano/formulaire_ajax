@@ -120,6 +120,30 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 ),
             ),
         ),
+        array(
+            'saisie' => 'selection_multiple',
+            'options' => array(
+                'nom' => 'test_selection_multiple_vide',
+                'datas' => array(
+                    1 => "un",
+                    2 => "deux",
+                    3 => "trois",
+                    4 => "quatre",
+                ),
+            ),
+        ),
+        array(
+            'saisie' => 'selection_multiple',
+            'options' => array(
+                'nom' => 'test_selection_multiple',
+                'datas' => array(
+                    1 => "un",
+                    2 => "deux",
+                    3 => "trois",
+                    4 => "quatre",
+                ),
+            ),
+        ),
     );
 
     return $saisies;
@@ -146,6 +170,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_radio' => '2',
         'test_textarea' => 'Lorem Ipsum etc…',
         'test_selection' => '3',
+        'test_selection_multiple' => array('1', '3'),
     );
 
     return $valeurs;
