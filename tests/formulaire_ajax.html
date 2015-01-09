@@ -87,6 +87,15 @@
      QUnit.test( "saisie oui_non non", function( assert ) {
        assert.deepEqual( valeurs.test_oui_non_non, "", "OK !" );
      });
+
+     QUnit.test( "saisie radio vide", function( assert ) {
+       assert.deepEqual( valeurs.test_radio_vide, null, "OK !" );
+     });
+
+     QUnit.test( "saisie radio", function( assert ) {
+       assert.deepEqual( valeurs.test_radio, '2', "OK !" );
+     });
+
     </script>
   </body>
 </html>

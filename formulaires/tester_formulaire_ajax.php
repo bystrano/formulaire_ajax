@@ -78,6 +78,30 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 'nom' => 'test_oui_non_non',
             ),
         ),
+        array(
+            'saisie' => 'radio',
+            'options' => array(
+                'nom' => 'test_radio_vide',
+                'datas' => array(
+                    1 => "un",
+                    2 => "deux",
+                    3 => "trois",
+                    4 => "quatre",
+                ),
+            ),
+        ),
+        array(
+            'saisie' => 'radio',
+            'options' => array(
+                'nom' => 'test_radio',
+                'datas' => array(
+                    1 => "un",
+                    2 => "deux",
+                    3 => "trois",
+                    4 => "quatre",
+                ),
+            ),
+        ),
     );
 
     return $saisies;
@@ -101,6 +125,7 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_input_dans_fieldset' => 'on met le brun',
         'test_oui_non_oui' => 'on',
         'test_oui_non_non' => '',
+        'test_radio' => '2',
     );
 
     return $valeurs;

@@ -33,6 +33,17 @@
 
                     return valeur;
                 },
+                radio: function (champ) {
+                    var valeur = null;
+
+                    $(champ).find('input').each(function () {
+                        if ($(this).attr('checked') === 'checked') {
+                            valeur = $(this).attr('value');
+                        }
+                    });
+
+                    return valeur;
+                },
                 oui_non: function (champ) {
                     var valeur = '';
 
