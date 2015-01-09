@@ -5,7 +5,7 @@
 
         form = $(this);
 
-        config = $.extend({
+        config = $.extend(true, {
             // Options par défaut
             blocsAjax: [], // Un tableau de noms ajax de <INCLURE>
             // soumettre automatiquement le formulaire dès qu'une
