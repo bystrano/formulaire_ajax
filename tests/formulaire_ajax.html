@@ -46,7 +46,7 @@
      }),
          valeurs = form.valeurs();
 
-     QUnit.module("Récupérations des valeurs du formulaire - Saisies simples")
+     QUnit.module("Calcul des valeurs du formulaire - Saisies simples")
 
      QUnit.test( "saisie input", function( assert ) {
        assert.deepEqual( valeurs.test_input, "metaphoneme", "OK !" );
@@ -110,6 +110,14 @@
 
      QUnit.test( "saisie selection_multiple", function( assert ) {
        assert.deepEqual( valeurs.test_selection_multiple, ['1', '3'], "OK !" );
+     });
+
+     QUnit.test( "saisie date sans horaire", function( assert ) {
+       assert.deepEqual( valeurs.test_date_simple, '2014-02-23' , "OK !" );
+     });
+
+     QUnit.test( "saisie date avec horaire", function( assert ) {
+       assert.deepEqual( valeurs.test_date_horaire, '2015-03-30 14:30:00' , "OK !" );
      });
 
     </script>

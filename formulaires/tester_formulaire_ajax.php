@@ -144,6 +144,19 @@ function formulaires_tester_formulaire_ajax_saisies_dist () {
                 ),
             ),
         ),
+        array(
+            'saisie' => 'date',
+            'options' => array(
+                'nom' => 'test_date_simple',
+            ),
+        ),
+        array(
+            'saisie' => 'date',
+            'options' => array(
+                'nom' => 'test_date_horaire',
+                'horaire' => 'oui',
+            ),
+        ),
     );
 
     return $saisies;
@@ -171,6 +184,11 @@ function formulaires_tester_formulaire_ajax_charger_dist () {
         'test_textarea' => 'Lorem Ipsum etc…',
         'test_selection' => '3',
         'test_selection_multiple' => array('1', '3'),
+        'test_date_simple' => '2014/02/23',
+        'test_date_horaire' => array(
+            'date' => '2015/03/30',
+            'heure' => '14:30',
+        ),
     );
 
     return $valeurs;

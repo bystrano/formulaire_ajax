@@ -80,6 +80,26 @@
                     });
 
                     return valeur;
+                },
+                date: function (champ) {
+                    var valeur = {},
+                        inputs = $(champ).find('input'),
+                        horaire = (inputs.length === 2);
+
+                    if ( ! horaire) {
+                        return inputs.attr('value').replace('/','-','g');
+                    } else {
+                        inputs.each(function () {
+                            if ($(this).hasClass('date')) {
+                                valeur.date = $(this).attr('value');
+                            } else if ($(this).hasClass('heure')) {
+                                valeur.heure = $(this).attr('value');
+                            }
+                        });
+
+                        return valeur.date.replace('/','-','g') + ' '
+                            + valeur.heure + ':00';
+                    }
                 }
             }
         }, options);
