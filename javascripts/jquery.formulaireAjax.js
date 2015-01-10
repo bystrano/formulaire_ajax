@@ -5,12 +5,23 @@
 
         form = $(this);
 
+        // Options par défaut
         config = $.extend(true, {
-            // Options par défaut
-            blocsAjax: [], // Un tableau de noms ajax de <INCLURE>
+            // Un tableau de noms ajax de <INCLURE>
+            blocsAjax: [],
             // soumettre automatiquement le formulaire dès qu'une
             // valeur change
             autoSubmit: true,
+            // permet de changer le format de date renvoyé par les
+            // saisies date
+            //
+            // 'request' permet de recupérer la date au format
+            //           habituel renvoyé par la fonction _request.
+            // 'datetime' permet d'avoir la date au format datetime
+            //            valeur par défaut pour pouvoir passer dans
+            //            des urls et l'utiliser directement dans des
+            //            critères de boucles.
+            formatDate: 'datetime',
             // Donne des fonctions pour trouver la valeur d'une saisie
             calculValeurSaisie: {
                 defaut: function (champ) {
@@ -87,7 +98,14 @@
                         horaire = (inputs.length === 2);
 
                     if ( ! horaire) {
-                        return inputs.attr('value').replace('/','-','g');
+                        valeur = inputs.attr('value');
+
+                        if (config.formatDate === 'request') {
+                            return valeur;
+                        } else {
+                            return valeur.replace('/','-','g');
+                        }
+
                     } else {
                         inputs.each(function () {
                             if ($(this).hasClass('date')) {
@@ -97,8 +115,12 @@
                             }
                         });
 
-                        return valeur.date.replace('/','-','g') + ' '
-                            + valeur.heure + ':00';
+                        if (config.formatDate === 'request') {
+                            return valeur;
+                        } else {
+                            return valeur.date.replace('/','-','g') + ' '
+                                + valeur.heure + ':00';
+                        }
                     }
                 }
             }
