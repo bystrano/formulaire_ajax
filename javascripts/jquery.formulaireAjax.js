@@ -44,6 +44,30 @@
 
                     return valeur;
                 },
+                checkbox_mots: function (champ) {
+                    var inputs = $(champ).find('input'),
+                        valeur = [];
+
+                    inputs.each(function () {
+                        if ($(this).attr('checked') === 'checked') {
+                            valeur.push($(this).attr('value'));
+                        }
+                    });
+
+                    return valeur;
+                },
+                checkbox_mots_arborescents: function (champ) {
+                    var inputs = $(champ).find('input'),
+                        valeur = [];
+
+                    inputs.each(function () {
+                        if ($(this).attr('checked') === 'checked') {
+                            valeur.push($(this).attr('value'));
+                        }
+                    });
+
+                    return valeur;
+                },
                 radio: function (champ) {
                     var valeur = null;
 
