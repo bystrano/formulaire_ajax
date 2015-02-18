@@ -202,13 +202,19 @@
             // chose change
             form
                 .find('input')
-                .change(function (e) {
-                    form.submit();
-                })
-                // les inputs n'émettent pas de 'change' lors de la
-                // frappe
+                // les inputs de type text n'émettent pas de 'change'
+                // lors de la frappe
                 .keyup(function () {
                     form.submit();
+                })
+                // pour les autres saisies on se fie à change
+                .change(function (e) {
+                    if ((e.target.type !== 'text') &&
+                        (e.target.type !== 'search') &&
+                        (e.target.type !== 'email')) {
+
+                        form.submit();
+                    }
                 });
 
             // … du coup on a plus besoin du bouton
