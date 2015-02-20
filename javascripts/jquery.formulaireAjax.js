@@ -116,6 +116,18 @@
 
                     return valeur;
                 },
+                selection_multiple_mots: function (champ) {
+                    var valeur = null;
+
+                    $(champ).find('option').each(function () {
+                        if ($(this).attr('selected') === 'selected') {
+                            if ( ! valeur) { valeur = []; }
+                            valeur.push($(this).attr('value'));
+                        }
+                    });
+
+                    return valeur;
+                },
                 date: function (champ) {
                     var valeur = {},
                         inputs = $(champ).find('input'),
