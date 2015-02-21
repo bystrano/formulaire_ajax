@@ -229,6 +229,12 @@
                     }
                 });
 
+            form
+                .find('select')
+                .change(function (e) {
+                    form.submit();
+                });
+
             // … du coup on a plus besoin du bouton
             form.find('.boutons').remove();
         }
