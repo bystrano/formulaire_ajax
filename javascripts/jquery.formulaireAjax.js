@@ -1,7 +1,7 @@
 (function ($) {
     $.fn.formulaireAjax = function (options) {
 
-        var config, form, champs;
+        var config, form, champs, timer;
 
         form = $(this);
 
@@ -201,12 +201,19 @@
             .unbind('submit')
             .submit(function (e) {
                 e.preventDefault();
-                for (var i in config.blocsAjax) {
-                    ajaxReload(config.blocsAjax[i], {
-                        args: form.valeurs(),
-                        history: true
-                    });
+
+                function rechargerBlocs () {
+                    for (var i in config.blocsAjax) {
+                        ajaxReload(config.blocsAjax[i], {
+                            args: form.valeurs(),
+                            history: true
+                        });
+                    }
                 }
+                /* On ne fait pas la requête ajax tout de suite, pour
+                   éviter d'en faire plein quand on tape vite */
+                window.clearTimeout(timer);
+                timer = window.setTimeout(rechargerBlocs, 50);
             });
 
         if (config.autoSubmit) {
