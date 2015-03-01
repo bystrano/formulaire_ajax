@@ -1,0 +1,52 @@
+* Des formulaires AJAX avancés pour SPIP
+
+  Ce plugin ajoute à SPIP un plugin jQuery qui facilite la création de
+  formulaires qui déclenchent des chargements de blocs SPIP en
+  AJAX. SPIP propose déjà un mécanisme très simple pour poster des
+  formulaires CVT en AJAX, mais sa simplicité le rend un peu
+  limité. On ne peut pas déclencher le chargement en AJAX d'autres
+  blocs que celui qui contient le formulaire. Ce plugin permet de le
+  faire facilement.
+
+  Ce plugin ne fonctionne qu'avec des formulaires dont les saisies ont
+  été générées par le plugin [[http://contrib.spip.net/Saisies][Saisies]].
+
+** Utilisation
+
+   Voici un exemple d'utilisation :
+
+   #+BEGIN_SRC html
+     #FORMULAIRE_EXEMPLE_README
+
+     <script type="text/javascript">
+       $('.formulaire_exemple_readme').formulaireAjax({
+         blocsAjax: ['blocExemple'],
+         autoSubmit: false,
+       });
+     </script>
+
+     <INCLURE{fond=inclure/exemple, env, ajax=blocExemple}>
+   #+END_SRC
+
+   Ainsi, soumettre le formulaire ne déclenchera pas un chargement
+   complet de la page, mais seulement un chargement en AJAX du bloc
+   =blocExemple=. Les valeurs saisies dans le formulaire seront
+   postées dans le contexte de la requête, ce qui permet d'utiliser
+   les valeurs postées par le formulaire dans le squelette
+   =inclure/exemple.html=, en utilisant simplement la balise =#ENV=.
+
+** Paramètres
+
+   - =blocsAjax= permet de spécifier une liste de noms de blocs AJAX à
+     recharger à chaque fois que le formulaire est posté.
+   - =autoSubmit= permet de soumettre automatiquement le formulaire à
+     chaque fois qu'une des valeurs saisies change. Sa valeur par
+     défaut est à =true=. Pour que l'option =autoSubmit= fonctionne
+     correctement, il ne faut pas que le formulaire qu'on "ajaxifie"
+     soit inclus dans un des blocs du paramètre =blocsAjax= !
+   - =formatDate= permet de choisir le format dans lequel les valeurs
+     d'éventuelles saisies date seront passées dans les requêtes
+     AJAX. Cette option a deux valeurs possibles : =request= ou
+     =datetime=, qui correspondent au format habituel renvoyé par un
+     appel à la fonction =_request= en PHP et au format des champs
+     date de MySQL. Sa valeur par défaut est =datetime=.
