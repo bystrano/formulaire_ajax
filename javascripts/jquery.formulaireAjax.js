@@ -228,9 +228,12 @@
                 })
                 // pour les autres saisies on se fie à change
                 .change(function (e) {
-                    if ((e.target.type !== 'text') &&
-                        (e.target.type !== 'search') &&
-                        (e.target.type !== 'email')) {
+                    if (((e.target.type !== 'text') &&
+                         (e.target.type !== 'search') &&
+                         (e.target.type !== 'email'))
+                        /* Les datepicker sont de type 'text', mais
+                           sont un cas spécial */
+                        || ($(e.target).hasClass('datePicker'))) {
 
                         form.submit();
                     }
