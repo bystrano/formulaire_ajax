@@ -1,4 +1,11 @@
+/* jshint strict: true, undef: true, unused: true, curly: true,
+   eqeqeq: true, freeze: true, funcscope: true, futurehostile: true,
+   nonbsp: true */
+/* globals ajaxReload, window, jQuery */
+
 (function ($) {
+    "use strict";
+
     $.fn.formulaireAjax = function (options) {
 
         var config, form, champs, timer;
@@ -154,8 +161,8 @@
                         if (config.formatDate === 'request') {
                             return valeur;
                         } else {
-                            return valeur.date.replace('/','-','g') + ' '
-                                + valeur.heure + ':00';
+                            return valeur.date.replace('/','-','g') + ' ' +
+                                valeur.heure + ':00';
                         }
                     }
                 }
@@ -171,7 +178,7 @@
             }
 
             return config.calculValeurSaisie.defaut;
-        }
+        };
 
         // retourne un objet contenant les valeurs des saisies du
         // formulaire
@@ -188,7 +195,7 @@
             });
 
             return valeurs;
-        }
+        };
 
 
         // s'il n'y a pas de blocs ajax on ne fait rien
@@ -230,10 +237,10 @@
                 .change(function (e) {
                     if (((e.target.type !== 'text') &&
                          (e.target.type !== 'search') &&
-                         (e.target.type !== 'email'))
+                         (e.target.type !== 'email')) ||
                         /* Les datepicker sont de type 'text', mais
                            sont un cas spécial */
-                        || ($(e.target).hasClass('datePicker'))) {
+                        ($(e.target).hasClass('datePicker'))) {
 
                         form.submit();
                     }
@@ -241,7 +248,7 @@
 
             form
                 .find('select')
-                .change(function (e) {
+                .change(function () {
                     form.submit();
                 });
 
