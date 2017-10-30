@@ -101,39 +101,13 @@
                     return $(champ).find('textarea').html();
                 },
                 selection: function (champ) {
-                    var valeur = '';
-
-                    $(champ).find('option').each(function () {
-                        if ($(this).attr('selected') === 'selected') {
-                            valeur = $(this).attr('value');
-                        }
-                    });
-
-                    return valeur;
+                    return $(champ).find('select').val();
                 },
                 selection_multiple: function (champ) {
-                    var valeur = null;
-
-                    $(champ).find('option').each(function () {
-                        if ($(this).attr('selected') === 'selected') {
-                            if ( ! valeur) { valeur = []; }
-                            valeur.push($(this).attr('value'));
-                        }
-                    });
-
-                    return valeur;
+                    return $(champ).find('select').val();
                 },
                 selection_multiple_mots: function (champ) {
-                    var valeur = null;
-
-                    $(champ).find('option').each(function () {
-                        if ($(this).attr('selected') === 'selected') {
-                            if ( ! valeur) { valeur = []; }
-                            valeur.push($(this).attr('value'));
-                        }
-                    });
-
-                    return valeur;
+                    return $(champ).find('select').val();
                 },
                 date: function (champ) {
                     var valeur = {},
