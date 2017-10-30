@@ -37,14 +37,14 @@
                 case: function (champ) {
                     var input = $(champ).find('input[type="checkbox"]');
 
-                    return (input.attr('checked') === 'checked') ? 'on' : '';
+                    return input[0].checked ? 'on' : '';
                 },
                 checkbox: function (champ) {
                     var inputs = $(champ).find('input'),
                         valeur = [];
 
                     inputs.each(function () {
-                        if ($(this).attr('checked') === 'checked') {
+                        if (this.checked) {
                             valeur.push($(this).attr('value'));
                         }
                     });
@@ -56,7 +56,7 @@
                         valeur = [];
 
                     inputs.each(function () {
-                        if ($(this).attr('checked') === 'checked') {
+                        if (this.checked) {
                             valeur.push($(this).attr('value'));
                         }
                     });
@@ -68,7 +68,7 @@
                         valeur = [];
 
                     inputs.each(function () {
-                        if ($(this).attr('checked') === 'checked') {
+                        if (this.checked) {
                             valeur.push($(this).attr('value'));
                         }
                     });
@@ -79,7 +79,7 @@
                     var valeur = null;
 
                     $(champ).find('input').each(function () {
-                        if ($(this).attr('checked') === 'checked') {
+                        if (this.checked) {
                             valeur = $(this).attr('value');
                         }
                     });
@@ -90,7 +90,7 @@
                     var valeur = '';
 
                     $(champ).find('input').each(function () {
-                        if ($(this).attr('checked') === 'checked') {
+                        if (this.checked) {
                             valeur = $(this).attr('value');
                         }
                     });
