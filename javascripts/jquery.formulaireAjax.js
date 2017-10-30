@@ -120,7 +120,7 @@
                         if (config.formatDate === 'request') {
                             return valeur;
                         } else {
-                            return valeur.replace('/','-','g');
+                            return valeur.replace(/\//g,'-');
                         }
 
                     } else {
@@ -135,7 +135,7 @@
                         if (config.formatDate === 'request') {
                             return valeur;
                         } else {
-                            return valeur.date.replace('/','-','g') + ' ' +
+                            return valeur.date.replace(/\//g,'-') + ' ' +
                                 valeur.heure + ':00';
                         }
                     }
