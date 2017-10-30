@@ -32,7 +32,7 @@
             // Donne des fonctions pour trouver la valeur d'une saisie
             calculValeurSaisie: {
                 defaut: function (champ) {
-                    return $(champ).find('input').attr('value');
+                    return $(champ).find('input').val();
                 },
                 case: function (champ) {
                     var input = $(champ).find('input[type="checkbox"]');
