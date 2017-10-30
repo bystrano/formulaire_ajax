@@ -1,7 +1,7 @@
 <paquet
   prefix="formulaire_ajax"
   categorie="outil"
-  version="1.0.0"
+  version="1.0.1"
   etat="stable"
   compatibilite="[3.0.17;3.2.*]"
   logo=""
