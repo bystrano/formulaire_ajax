@@ -1,10 +1,10 @@
-[(#AUTORISER{webmestre}|oui)
+<BOUCLE_si_webmestre(CONDITION){si #AUTORISER{webmestre}}>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>Tests Formulaire Ajax</title>
-    <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.16.0.css">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.16.0.css">
     #INSERT_HEAD
 
     <script> // Une fonction pour pouvoir tester l'égalité de tableaux
@@ -134,4 +134,4 @@
     </script>
   </body>
 </html>
-]
+</BOUCLE_si_webmestre>
